@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 pool: 'default'
 trigger:
@@ -10,4 +11,18 @@ stages:
     - script: terraform init
     - script: terraform fmt
     - script:  terraform validate
+=======
+---
+pool: 'default'
+trigger:
+  - main
+stages:
+- stage: terraformcalling
+  jobs:
+  - job: callingterraform
+    steps: 
+    - script: terraform init
+    - script: terraform fmt
+    - script:  terraform validate
+>>>>>>> ae7855e16fc103137f6e933f4f26b066c868a607
     - script : terraform apply -auto-approve

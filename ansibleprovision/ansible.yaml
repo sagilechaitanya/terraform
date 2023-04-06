@@ -7,7 +7,7 @@ stages:
   jobs:
   - job: callingterraform
     steps: 
-    - script: sh "terraform init"
-    - script: sh "terraform fmt"
-    - script: sh "terraform terraform validate"
-    - script : sh "terraform aplly -auto-approve"
+    - script: terraform init
+    - script: terraform fmt
+    - script:  terraform validate
+    - script : terraform apply -auto-approve

@@ -1,0 +1,13 @@
+---
+pool: 'default'
+trigger:
+  - main
+stages:
+- stage: terraformcalling
+  jobs:
+  - job: callingterraform
+    steps: 
+    - script: terraform init
+    - script: terraform fmt
+    - script:  terraform validate
+    - script : terraform apply -auto-approve

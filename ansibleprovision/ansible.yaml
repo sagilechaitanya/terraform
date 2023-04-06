@@ -3,7 +3,7 @@ pool: 'default'
 trigger:
   - main
 stages:
-- stage: terraform calling
+- stage: terraformcalling
   jobs:
   - job: callingterraform
     steps: 

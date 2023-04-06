@@ -1,0 +1,13 @@
+---
+pool: 'default'
+trigger:
+  - main
+stages:
+- stage: terraform calling
+  jobs:
+  - job: callingterraform
+    steps: 
+    - script: sh "terraform init"
+    - script: sh "terraform fmt"
+    - script: sh "terraform terraform validate"
+    - script : sh "terraform aplly -auto-approve"

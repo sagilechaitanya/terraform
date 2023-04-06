@@ -20,6 +20,5 @@ output "instanceid2" {
   value = aws_instance.web["lb2"].id
 }
 output "lb" {
-value = aws_lb.test.dns_name
-  
+  value = aws_lb.test.dns_name
 }
